@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="7098bdb0-5415-497e-9886-295b7a9c776f">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="id_loai" class="java.lang.Integer"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT * FROM `san_pham`,`loai_sp` WHERE san_pham.id_loai_sp = loai_sp.id_loai_sp
+AND san_pham.id_loai_sp = $P{id_loai}]]>
+	</queryString>
+	<field name="id_sp" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="ten_sp" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="hinh_anh" class="java.lang.Object">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="id_exist" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="id_loai_sp" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="ten_loai_sp" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="dvt" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="id_khu_vuc" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="359" height="20" uuid="c68093a9-5d66-493a-a0e5-a95cc78af516"/>
+				<textElement>
+					<font size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Phần mềm quản lý kho siêu thị S.O.S ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="198" y="40" width="161" height="39" uuid="7b6626c4-b887-467b-bb40-c712fffc3a51"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[BÁO CÁO DANH SÁCH SẢN PHẨM]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="30" splitType="Stretch">
+			<staticText>
+				<reportElement x="20" y="2" width="100" height="20" uuid="db6f1ddb-f0f9-4635-94d7-b56a042eeed0"/>
+				<text><![CDATA[Tên sản phẩm]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="238" y="2" width="100" height="20" uuid="97bed8be-87e6-4347-8098-c612d7d7cd61"/>
+				<text><![CDATA[Loại sản phẩm]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="373" y="2" width="100" height="20" uuid="ce95108b-9e0f-48c2-a906-bb07e02857c0"/>
+				<text><![CDATA[Đơn vị tính]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="24" splitType="Stretch">
+			<textField>
+				<reportElement x="20" y="0" width="193" height="20" uuid="d1ab58b6-5aa4-4a27-b2e2-5aaab884ecaf"/>
+				<textFieldExpression><![CDATA[$F{ten_sp}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="238" y="0" width="100" height="20" uuid="029bb37d-7ad7-4506-87f3-84e2da88d8ef"/>
+				<textFieldExpression><![CDATA[$F{ten_loai_sp}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="373" y="0" width="100" height="20" uuid="f6962fe1-5017-4d7f-bf5b-5dfda3469274"/>
+				<textFieldExpression><![CDATA[$F{dvt}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

@@ -16,7 +16,7 @@ import java.lang.*;
 
 /**
  *
- * @author Xoan Tran
+ * @author phamq
  */
 public class fDangNhap extends javax.swing.JFrame {
 
@@ -102,7 +102,7 @@ public class fDangNhap extends javax.swing.JFrame {
         jLabel3.setText("Mật khẩu:");
 
         jPasswordFieldMatKhau.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jPasswordFieldMatKhau.setText("nhanvien1");
+        jPasswordFieldMatKhau.setText("admin");
         jPasswordFieldMatKhau.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jPasswordFieldMatKhauActionPerformed(evt);
